@@ -27,10 +27,73 @@ function calcular(){
     else if (kit >= 19 && suplemento >= 10) {
         pontosKitSupl = 1000 + ((kit - 19) * 30 + (suplemento - 10) * 15)
     }
-    else {
-        pontosKitSupl = ((kit - 19) * 30 + (suplemento - 10) * 15) 
-    }
+
 }
+if (equipe == "Preta"){
+    // equipe é Preta
+    if (Number(kit) >= 103 && suplemento >= 52) {
+        pontosKitSupl = 5000 + ((kit - 103) * 30 + (suplemento - 52) * 15)
+    }
+else if (Number(kit) >= 82 && suplemento >= 42) {
+    pontosKitSupl = 4000 + ((kit - 82) * 30 + (suplemento - 42) * 15)
+}
+else if (kit >= 52 && suplemento >= 26) {
+    pontosKitSupl = 2500 + ((kit - 52) * 30 + (suplemento - 26) * 15)
+}
+else if (kit >= 21 && suplemento >= 10) {
+    pontosKitSupl = 1000 + ((kit - 21) * 30 + (suplemento - 10) * 15)
+}
+
+}
+if (equipe == "Roxa"){
+    // equipe é Roxa
+    if (Number(kit) >= 102 && suplemento >= 51) {
+        pontosKitSupl = 5000 + ((kit - 102) * 30 + (suplemento - 51) * 15)
+    }
+else if (Number(kit) >= 82 && suplemento >= 41) {
+    pontosKitSupl = 4000 + ((kit - 82) * 30 + (suplemento - 41) * 15)
+}
+else if (kit >= 51 && suplemento >= 26) {
+    pontosKitSupl = 2500 + ((kit - 51) * 30 + (suplemento - 26) * 15)
+}
+else if (kit >= 20 && suplemento >= 10) {
+    pontosKitSupl = 1000 + ((kit - 20) * 30 + (suplemento - 10) * 15)
+}
+
+}
+if (equipe == "Verde"){
+    // equipe é verde
+    if (Number(kit) >= 88 && suplemento >= 44) {
+        pontosKitSupl = 5000 + ((kit - 88) * 30 + (suplemento - 44) * 15)
+    }
+else if (Number(kit) >= 70 && suplemento >= 35) {
+    pontosKitSupl = 4000 + ((kit - 70) * 30 + (suplemento - 35) * 15)
+}
+else if (kit >= 44 && suplemento >= 22) {
+    pontosKitSupl = 2500 + ((kit - 44) * 30 + (suplemento - 22) * 15)
+}
+else if (kit >= 18 && suplemento >= 9) {
+    pontosKitSupl = 1000 + ((kit - 18) * 30 + (suplemento - 9) * 15)
+}
+
+}
+if (equipe == "Vermelha"){
+    // equipe é verde
+    if (Number(kit) >= 93 && suplemento >= 47) {
+        pontosKitSupl = 5000 + ((kit - 93) * 30 + (suplemento - 47) * 15)
+    }
+else if (Number(kit) >= 74 && suplemento >= 38) {
+    pontosKitSupl = 4000 + ((kit - 74) * 30 + (suplemento - 38) * 15)
+}
+else if (kit >= 47 && suplemento >= 24) {
+    pontosKitSupl = 2500 + ((kit - 47) * 30 + (suplemento - 24) * 15)
+}
+else if (kit >= 19 && suplemento >= 9) {
+    pontosKitSupl = 1000 + ((kit - 19) * 30 + (suplemento - 9) * 15)
+}
+
+}
+ 
     // recupera a qtde pacote 5kg arroz
     let arroz5avulso = document.getElementById("arroz5avulso").value
     // recupera a qtde pacote 1kg arroz
@@ -44,7 +107,7 @@ function calcular(){
     // recupera a qtde oleo
     let oleo = document.getElementById("oleo").value
     // vamos somar os valor
-    let soma = Number(acaoSocial) + Number(homenagem) + (2 * Number(leite)) + Number(30 * kit) + Number(15 * suplemento) + Number(5 * arroz5avulso) + Number(arroz1avulso) + Number(2 * feijao2avulso) + Number(feijao1avulso) + Number(0,5 * macarrao) + Number(oleo)
+    let soma = Number(acaoSocial) + Number(homenagem) + (2 * Number(leite)) + pontosKitSupl  + Number(5 * arroz5avulso) + Number(arroz1avulso) + Number(2 * feijao2avulso) + Number(feijao1avulso) + Number(0,5 * macarrao) + Number(oleo)
     // devolve o resultado para o HTML
     document.getElementById("soma").innerHTML = soma.toFixed(2)
 }
