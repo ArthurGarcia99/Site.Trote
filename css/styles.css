@@ -7,37 +7,44 @@ body {
 }
 
 header {
-background-color: #28a745;
-color: white;
-padding: 15px 0; /* espaçamento interno 15px á esquerda e á direita e 0 para cima e para baixo*/
-font-size: 24px;
-border: 1px solid black;
+    background-color: #28a745;
+    color: white;
+    padding: 15px 0;
+    /* espaçamento interno 15px á esquerda e á direita e 0 para cima e para baixo*/
+    font-size: 24px;
+    border: 1px solid black;
 
 }
 
 nav {
-background-color: #007bff;
-padding: 10px;
-display: flex; /*Flex boxing*/
-justify-content: space-between;
-align-items: center;/*alinhamento vertical*/
+    background-color: #007bff;
+    padding: 10px;
+    display: flex;
+    /*Flex boxing*/
+    justify-content: space-between;
+    align-items: center;
+    /*alinhamento vertical*/
 }
 
 #links-menu {
     display: flex;
     gap: 20px;
-   
-}
-/*configura o estilo das ancoras que estão dentro do nav*/
-nav a {
-    color: white; /*texto branco*/
-    text-decoration: none; 
-    padding: 10px 15px; /* 10px acima e abaixo 15px esquerda e direita*/
-    font-size: 10px;
-    background: #005663;
-    border-radius: 5px; 
 
 }
+
+/*configura o estilo das ancoras que estão dentro do nav*/
+nav a {
+    color: white;
+    /*texto branco*/
+    text-decoration: none;
+    padding: 10px 15px;
+    /* 10px acima e abaixo 15px esquerda e direita*/
+    font-size: 10px;
+    background: #005663;
+    border-radius: 5px;
+
+}
+
 nav a:hover {
     background: #003d82;
 }
@@ -45,18 +52,22 @@ nav a:hover {
 img {
     width: 120px;
     height: auto;
-    margin-right: 20px; /*espaçameto externo á direita de 20 px*/
+    margin-right: 20px;
+    /*espaçameto externo á direita de 20 px*/
     border-radius: 10px;
 }
 
-.container{
+.container {
     width: 80%;
-    margin: 20px auto; /*20px espaçamento para direita esquerda*/
+    margin: 20px auto;
+    /*20px espaçamento para direita esquerda*/
     background: white;
-    padding: 20px;/*espaçamento interno nos 4 lados*/
+    padding: 20px;
+    /*espaçamento interno nos 4 lados*/
     border-radius: 10px;
     text-align: justify;
 }
+
 h2 {
     text-align: center;
 }
@@ -65,37 +76,43 @@ table tr td {
     padding: 20px;
 }
 
-table{
-margin: 0 auto; /* espaçamento esterno de 0 acima e abaixo e automatico esquerda e direita*/
+table {
+    margin: 0 auto;
+    /* espaçamento esterno de 0 acima e abaixo e automatico esquerda e direita*/
 }
 
 .laranja {
     background-color: orange;
 }
-.azul{
+
+.azul {
     background-color: blue;
 }
-.preta{
+
+.preta {
     background-color: black;
     color: white;
 }
-.roxo{
+
+.roxo {
     background-color: purple;
 }
-.verde{
+
+.verde {
     background-color: green;
 }
-.vermelha{
+
+.vermelha {
     background-color: red;
 }
 
-.cinza{
+.cinza {
     background-color: gray;
 }
 
 .campos {
     margin: 20px;
-   
+
 }
 
 .tabela {
@@ -105,7 +122,7 @@ margin: 0 auto; /* espaçamento esterno de 0 acima e abaixo e automatico esquerd
 }
 
 h2 li {
-   text-align: center;
+    text-align: center;
 }
 
 .tabela2 {
