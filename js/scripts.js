@@ -12,6 +12,23 @@ function calcular(){
     let suplemento = Number(document.getElementById("suplemento").value)
     // recupera a cor da equipe
     let equipe = document.getElementById("equipe").value
+    // recupera a qtde pacote 5kg arroz
+    let arroz5avulso = document.getElementById("arroz5avulso").value
+    // recupera a qtde pacote 1kg arroz
+    let arroz1avulso = document.getElementById("arroz1avulso").value
+    // recupera a qtde pacote 2kg feijão
+    let feijao2avulso = document.getElementById("feijao2avulso").value
+    // recupera a qtde pacote 1kg feijão
+    let feijao1avulso = document.getElementById("feijao1avulso").value
+    // recupera a qtde pacote macarrão
+    let macarrao = document.getElementById("macarrao").value
+    // recupera a qtde oleo
+    let oleo = document.getElementById("oleo").value
+    // recupera a qtde de doações
+    let doacaodesangue = Number(document.getElementById("doacaodesangue").value)
+    // recupera a qtde audio visual
+    let audiovisual = document.getElementById("audiovisual").value
+    
     let pontosKitSupl = 0 // guarda pontuacao de kit
     if (equipe == "Laranja"){
         // equipe é laranja
@@ -29,7 +46,7 @@ function calcular(){
     }
 
 }
-if (equipe == "Preta"){
+else if (equipe == "Preta"){
     // equipe é Preta
     if (Number(kit) >= 103 && suplemento >= 52) {
         pontosKitSupl = 5000 + ((kit - 103) * 30 + (suplemento - 52) * 15)
@@ -45,7 +62,7 @@ else if (kit >= 21 && suplemento >= 10) {
 }
 
 }
-if (equipe == "Roxa"){
+ else if (equipe == "Roxa"){
     // equipe é Roxa
     if (Number(kit) >= 102 && suplemento >= 51) {
         pontosKitSupl = 5000 + ((kit - 102) * 30 + (suplemento - 51) * 15)
@@ -61,7 +78,7 @@ else if (kit >= 20 && suplemento >= 10) {
 }
 
 }
-if (equipe == "Verde"){
+else if (equipe == "Verde"){
     // equipe é verde
     if (Number(kit) >= 88 && suplemento >= 44) {
         pontosKitSupl = 5000 + ((kit - 88) * 30 + (suplemento - 44) * 15)
@@ -77,7 +94,7 @@ else if (kit >= 18 && suplemento >= 9) {
 }
 
 }
-if (equipe == "Vermelha"){
+else if (equipe == "Vermelha"){
     // equipe é verde
     if (Number(kit) >= 93 && suplemento >= 47) {
         pontosKitSupl = 5000 + ((kit - 93) * 30 + (suplemento - 47) * 15)
@@ -93,21 +110,52 @@ else if (kit >= 19 && suplemento >= 9) {
 }
 
 }
- 
-    // recupera a qtde pacote 5kg arroz
-    let arroz5avulso = document.getElementById("arroz5avulso").value
-    // recupera a qtde pacote 1kg arroz
-    let arroz1avulso = document.getElementById("arroz1avulso").value
-    // recupera a qtde pacote 2kg feijão
-    let feijao2avulso = document.getElementById("feijao2avulso").value
-    // recupera a qtde pacote 1kg feijão
-    let feijao1avulso = document.getElementById("feijao1avulso").value
-    // recupera a qtde pacote macarrão
-    let macarrao = document.getElementById("macarrao").value
-    // recupera a qtde oleo
-    let oleo = document.getElementById("oleo").value
-    // vamos somar os valor
-    let soma = Number(acaoSocial) + Number(homenagem) + (2 * Number(leite)) + pontosKitSupl  + Number(5 * arroz5avulso) + Number(arroz1avulso) + Number(2 * feijao2avulso) + Number(feijao1avulso) + Number(0,5 * macarrao) + Number(oleo)
+
+let pontosdoacaosangue = 0 //guarda pontuação doação do sangue
+if (equipe == "Laranja"){
+    if(doacaodesangue >= 49){
+        pontosdoacaosangue = 2500 + ((doacaodesangue - 49) * 20)
+    } else if(doacaodesangue < 49){
+        pontosdoacaosangue += (doacaodesangue * 20)
+    }
+}
+
+else if (equipe == "Preta"){
+    if(doacaodesangue >= 52){
+        pontosdoacaosangue = 2500 + ((doacaodesangue - 52) * 20)
+    } else if(doacaodesangue < 52){
+        pontosdoacaosangue += (doacaodesangue * 20)
+    }
+}
+
+
+else if (equipe == "Roxa"){
+    if(doacaodesangue >= 51){
+        pontosdoacaosangue = 2500 + ((doacaodesangue - 51) * 20)
+    } else if(doacaodesangue < 51){
+        pontosdoacaosangue += (doacaodesangue * 20)
+    }
+}
+
+else if (equipe == "Verde"){
+    if(doacaodesangue >= 44){
+        pontosdoacaosangue = 2500 + ((doacaodesangue - 44) * 20)
+    } else if(doacaodesangue < 44){
+        pontosdoacaosangue += (doacaodesangue * 20)
+    }
+}
+
+
+else if (equipe == "Vermelha"){
+    if(doacaodesangue >= 47){
+        pontosdoacaosangue = 2500 + ((doacaodesangue - 47) * 20)
+    } else if(doacaodesangue < 47){
+        pontosdoacaosangue += (doacaodesangue * 20)
+    }
+}
+
+    
+    let soma = Number(acaoSocial) + Number(homenagem) + (2 * Number(leite)) + pontosKitSupl + pontosdoacaosangue + Number(audiovisual) + Number(5 * arroz5avulso) + Number(arroz1avulso) + Number(2 * feijao2avulso) + Number(feijao1avulso) + Number(0,5 * macarrao) + Number(oleo)
     // devolve o resultado para o HTML
     document.getElementById("soma").innerHTML = soma.toFixed(2)
 }
